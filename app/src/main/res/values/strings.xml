@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">MRGS Library</string>
 
+    <!-- logo -->
+    <string name="book_logo">Book</string>
+
     <!-- heading -->
     <string name="mrgs_heading">MRGS Library</string>
     <string name="register_heading">Register</string>
@@ -32,4 +35,17 @@
         completions."
     </string>
     <string name="sample_message">Hello!</string>
+
+    <!-- Button -->
+    <string name="home_button">Home</string>
+    <string name="sort_button">Sort</string>
+    <string name="mybook_button">My Book</string>
+    <string name="me_button">Me</string>
+    <string name="logout_button">Logout</string>
+
+    <!-- Label -->
+    <string name="home_label">Home</string>
+    <string name="sort_label">Sort</string>
+    <string name="mybook_label">My Book</string>
+    <string name="me_label">Me</string>
 </resources>
