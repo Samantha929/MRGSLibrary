@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1047836806584",
+    "project_id": "mrgs-library-firebase",
+    "storage_bucket": "mrgs-library-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047836806584:android:468abf30d63fdab1dc134d",
+        "android_client_info": {
+          "package_name": "com.mrgs.library"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1047836806584-dnbjedsv0m5vudslvt6t2sv1i9ut6l9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDscx3xlMRZLp2PTekI4LeUNOMMNnmoDzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047836806584-dnbjedsv0m5vudslvt6t2sv1i9ut6l9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
