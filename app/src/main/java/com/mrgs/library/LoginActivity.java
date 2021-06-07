@@ -3,6 +3,7 @@ package com.mrgs.library;
 import android.content.Intent;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.TextUtils;
@@ -15,7 +16,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -77,14 +80,18 @@ public class LoginActivity extends AppCompatActivity {
                 String password = mPasswordView.getText().toString();
 
                 //Executed when is success to sign in
-                mAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(
-                        new OnSuccessListener<AuthResult>() {
+                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
+                        new OnCompleteListener<AuthResult>() {
                             @Override
-                            public void onSuccess(AuthResult authResult) {
-                                Toast.makeText(getApplicationContext(), "Sign in Success", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, com.mrgs.library.MainChatActivity.class);
-                                finish();
-                                startActivity(intent);
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(getApplicationContext(), "Sign in Success", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginActivity.this, com.mrgs.library.MainChatActivity.class);
+                                    finish();
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
             }
