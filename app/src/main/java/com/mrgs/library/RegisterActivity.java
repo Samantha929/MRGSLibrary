@@ -66,6 +66,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    // Executed when Sign in button pressed
+    public void backLoginActivity(View v) {
+        Intent intent = new Intent(this, com.mrgs.library.LoginActivity.class);
+        finish();
+        startActivity(intent);
+    }
+
     // Executed when Sign Up button is pressed.
     public void signUp(View v) {
         attemptRegistration();
