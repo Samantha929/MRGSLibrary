@@ -147,6 +147,7 @@ public class RegisterActivity extends AppCompatActivity {
                         startActivity(intent);
                         if (!task.isSuccessful()){
                             Log.d("firebase", "user create failed");
+                            Toast.makeText(getApplicationContext(), "Registered Failed", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
