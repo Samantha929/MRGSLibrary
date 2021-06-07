@@ -119,6 +119,19 @@
         android:text="@string/signup_button"
         android:textStyle="bold"/>
 
+    <Button
+        android:id="@+id/register_signin_button"
+        style="?android:textAppearanceMedium"
+        android:background="@color/white"
+        android:textColor="@color/blue"
+        android:onClick="backLoginActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/signin_button"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
 
 
 </LinearLayout>
