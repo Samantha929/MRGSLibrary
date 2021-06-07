@@ -49,6 +49,7 @@
             android:imeOptions="actionNext"
             android:textColor="@color/blue"
             android:textColorHint="@color/blue"
+            android:text="@string/mrgs_email"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:textIsSelectable="false"
