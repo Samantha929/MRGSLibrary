@@ -1,5 +1,6 @@
 package com.mrgs.library;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
@@ -13,11 +14,11 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,10 +30,12 @@ public class LoginActivity extends AppCompatActivity {
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private Button mSignIn;
+    ProgressBar login_progressBar;
 
     //Firebase authentication (auth)
     private FirebaseAuth mAuth;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         mEmailView = findViewById(R.id.login_email);
         mPasswordView = findViewById(R.id.login_password);
         mSignIn = findViewById(R.id.login_sign_in_button);
+        login_progressBar = findViewById(R.id.login_progressBar);
 
         //Set on editor action listener for keyboard sign in action
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -79,6 +83,9 @@ public class LoginActivity extends AppCompatActivity {
                 String email = mEmailView.getText().toString();
                 String password = mPasswordView.getText().toString();
 
+                //Showing visible login progress bar when signing in
+                login_progressBar.setVisibility((View.VISIBLE));
+
                 //Executed when is success to sign in
                 mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
                         new OnCompleteListener<AuthResult>() {
@@ -91,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                    login_progressBar.setVisibility(View.GONE);
                                 }
                             }
                         });
