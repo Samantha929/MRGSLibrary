@@ -122,16 +122,23 @@
     <Button
         android:id="@+id/register_signin_button"
         style="?android:textAppearanceMedium"
-        android:background="@color/white"
-        android:textColor="@color/blue"
-        android:onClick="backLoginActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/signin_button"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:onClick="backLoginActivity"
+        android:text="@string/back_signin_button"
+        android:textColor="@color/blue"
         android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
+    <ProgressBar
+        android:id="@+id/register_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
 
 
 </LinearLayout>
