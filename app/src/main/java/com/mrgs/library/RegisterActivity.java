@@ -146,12 +146,13 @@ public class RegisterActivity extends AppCompatActivity {
                 new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d("firebase", "createUser onComplete;" + task.isSuccessful());
-                        Toast.makeText(getApplicationContext(), "Registered Success", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegisterActivity.this, com.mrgs.library.MainChatActivity.class);
-                        finish();
-                        startActivity(intent);
-                        if (!task.isSuccessful()){
+                        if (task.isSuccessful()) {
+                            Log.d("firebase", "createUser onComplete;" + task.isSuccessful());
+                            Toast.makeText(getApplicationContext(), "Registered Success", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(RegisterActivity.this, com.mrgs.library.MainChatActivity.class);
+                            finish();
+                            startActivity(intent);
+                        } else {
                             Log.d("firebase", "user create failed");
                         Toast.makeText(getApplicationContext(), "Registered Failed", Toast.LENGTH_SHORT).show();
                         register_progressBar.setVisibility(View.GONE);
