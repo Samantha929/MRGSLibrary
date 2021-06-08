@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     private AutoCompleteTextView mUsernameView;
     private EditText mPasswordView;
     private EditText mConfirmPasswordView;
+    ProgressBar register_progressBar;
 
     //Firebase authentication (auth)
     private FirebaseAuth mAuth;
@@ -47,6 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
         mPasswordView = findViewById(R.id.register_password);
         mConfirmPasswordView = findViewById(R.id.register_confirm_password);
         mUsernameView = findViewById(R.id.register_username);
+        register_progressBar = findViewById(R.id.register_progressBar);
 
         // Keyboard sign in action
         mConfirmPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -135,6 +138,9 @@ public class RegisterActivity extends AppCompatActivity {
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
+        //Showing visible register progress bar when signing up
+        register_progressBar.setVisibility(View.VISIBLE);
+
         //Executed when is complete to sign in
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this,
                 new OnCompleteListener<AuthResult>() {
@@ -147,7 +153,8 @@ public class RegisterActivity extends AppCompatActivity {
                         startActivity(intent);
                         if (!task.isSuccessful()){
                             Log.d("firebase", "user create failed");
-                            Toast.makeText(getApplicationContext(), "Registered Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Registered Failed", Toast.LENGTH_SHORT).show();
+                        register_progressBar.setVisibility(View.GONE);
                         }
                     }
                 });
