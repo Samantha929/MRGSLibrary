@@ -8,6 +8,7 @@
     <string name="mrgs_heading">MRGS Library</string>
     <string name="register_heading">Register</string>
     <string name="login_heading">Login</string>
+    <string name="me_heading">Me</string>
 
     <!-- label for enter box -->
     <string name="username">Username</string>
