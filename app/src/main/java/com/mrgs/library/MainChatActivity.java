@@ -1,6 +1,8 @@
 package com.mrgs.library;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 //import android.support.v7.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +25,11 @@ public class MainChatActivity extends AppCompatActivity {
 
     }
 
-
+    // Executed when Me button pressed
+    public void openMeActivity(View v) {
+        Intent intent = new Intent(MainChatActivity.this, com.mrgs.library.MeActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public void onStop() {
