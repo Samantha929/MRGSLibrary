@@ -25,8 +25,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class RegisterActivity extends AppCompatActivity {
 
     // Constants
-    public static final String CHAT_PREFS = "ChatPrefs";
-    public static final String DISPLAY_NAME_KEY = "username";
+    public static final String ME_PREFS = "MePrefs";
+    public static final String DISPLAY_NAME_KEY = "username and email";
 
     // UI references variables
     private AutoCompleteTextView mEmailView;
