@@ -86,13 +86,26 @@ public class RegisterActivity extends AppCompatActivity {
         // Reset errors displayed in the form.
         mEmailView.setError(null);
         mPasswordView.setError(null);
+        mUsernameView.setError(null);
 
         // Store values at the time of the login attempt.
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
+        String username = mUsernameView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
+
+        //Check if the username are empty
+        if (TextUtils.isEmpty(username)) {
+            mUsernameView.setError(getString(R.string.error_field_required));
+            focusView = mUsernameView;
+            cancel = true;
+        } else if (!isUsernameValid(username)) {
+            mUsernameView.setError(getString(R.string.error_invalid_username));
+            focusView = mUsernameView;
+            cancel = true;
+        }
 
         // Check for a valid password, if the user entered one.
         if (TextUtils.isEmpty(password) || !isPasswordValid(password)) {
@@ -120,6 +133,11 @@ public class RegisterActivity extends AppCompatActivity {
             createFirebaseUser();
 
         }
+    }
+
+    private boolean isUsernameValid(String username) {
+        username = mUsernameView.getText().toString();
+        return username.length()<=20;
     }
 
     private boolean isEmailValid(String email) {
@@ -160,8 +178,5 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 });
     }
-
-
-
 
 }

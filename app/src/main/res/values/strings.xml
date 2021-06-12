@@ -28,6 +28,7 @@
     <string name="action_send">Send</string>
 
     <!-- error -->
+    <string name="error_invalid_username">This username is too long</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">Password too short or does not match</string>
     <string name="error_invalid_password_too_short">Password is too short</string>
