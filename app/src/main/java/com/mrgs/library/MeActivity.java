@@ -3,7 +3,6 @@ package com.mrgs.library;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +22,8 @@ public class MeActivity extends AppCompatActivity {
     public void attemptLogout(View v) {
         FirebaseAuth.getInstance().signOut();
         Toast.makeText(MeActivity.this, "Logged out", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(MeActivity.this, LoginActivity.class));
+        Intent intent = new Intent(MeActivity.this, com.mrgs.library.LoginActivity.class);
+        finish();
+        startActivity(intent);
     }
 }
