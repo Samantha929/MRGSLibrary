@@ -35,6 +35,11 @@
             android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
 
+        <activity
+            android:name="com.mrgs.library.MeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
     </application>
 
 </manifest>
