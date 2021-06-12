@@ -76,35 +76,6 @@ public class LoginActivity extends AppCompatActivity {
     //Attempt login function
     private void attemptLogin() {
 
-        //Using firebase auth to sign with email and password
-        mSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email = mEmailView.getText().toString();
-                String password = mPasswordView.getText().toString();
-
-                //Showing visible login progress bar when signing in
-                login_progressBar.setVisibility((View.VISIBLE));
-
-                //Executed when is success to sign in
-                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Sign in Success", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(LoginActivity.this, com.mrgs.library.MainChatActivity.class);
-                                    finish();
-                                    startActivity(intent);
-                                } else {
-                                    Toast.makeText(getApplicationContext(), "Sign in Failed", Toast.LENGTH_SHORT).show();
-                                    login_progressBar.setVisibility(View.GONE);
-                                }
-                            }
-                        });
-            }
-        });
-
         //Error message
 
         // Reset errors displayed in the form.
@@ -156,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isPasswordValid(String password) {
         password = mPasswordView.getText().toString();
         //Only return true if its the same as first entry and length is over or equal to 8 characters
-        return password.equals(password) && password.length() >= 8;
+        return password.length() >= 8;
 
     }
 
