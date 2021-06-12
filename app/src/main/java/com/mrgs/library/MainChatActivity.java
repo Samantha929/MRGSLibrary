@@ -28,6 +28,7 @@ public class MainChatActivity extends AppCompatActivity {
     // Executed when Me button pressed
     public void openMeActivity(View v) {
         Intent intent = new Intent(MainChatActivity.this, com.mrgs.library.MeActivity.class);
+        finish();
         startActivity(intent);
     }
 
