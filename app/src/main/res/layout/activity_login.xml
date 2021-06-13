@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:imeActionId="@integer/login"
-            android:imeActionLabel="@string/signin_button"
+            android:imeActionLabel="@string/login_button"
             android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
             android:maxLines="1"
@@ -80,14 +80,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/login_sign_in_button"
+        android:id="@+id/login_button"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@color/orange"
         android:onClick="signInExistingUser"
-        android:text="@string/signin_button"
+        android:text="@string/login_button"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold" />

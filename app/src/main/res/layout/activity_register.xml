@@ -120,7 +120,7 @@
         android:textStyle="bold"/>
 
     <Button
-        android:id="@+id/register_signin_button"
+        android:id="@+id/register_login_button"
         style="?android:textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,7 +128,7 @@
         android:layout_marginBottom="20dp"
         android:background="@color/white"
         android:onClick="backLoginActivity"
-        android:text="@string/back_signin_button"
+        android:text="@string/back_login_button"
         android:textColor="@color/blue"
         android:textSize="16sp"
         android:textStyle="bold" />

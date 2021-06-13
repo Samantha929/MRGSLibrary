@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     // UI references variables
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private Button mSignIn;
+    Button mLogin;
     ProgressBar login_progressBar;
 
     //Firebase authentication (auth)
@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mEmailView = findViewById(R.id.login_email);
         mPasswordView = findViewById(R.id.login_password);
-        mSignIn = findViewById(R.id.login_sign_in_button);
+        mLogin = findViewById(R.id.login_button);
         login_progressBar = findViewById(R.id.login_progressBar);
 
         //Set on editor action listener for keyboard sign in action
