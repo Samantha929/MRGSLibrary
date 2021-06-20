@@ -108,7 +108,15 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         // Check for a valid password, if the user entered one.
-        if (TextUtils.isEmpty(password) || !isPasswordValid(password)) {
+        if (TextUtils.isEmpty(password)) {
+            mPasswordView.setError(getString(R.string.error_field_required));
+            focusView = mPasswordView;
+            cancel = true;
+        } else if (!isPasswordValid(password)) {
+            mPasswordView.setError(getString(R.string.error_invalid_password_too_short));
+            focusView = mPasswordView;
+            cancel = true;
+        } else if (!isPasswordNotMatch(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
@@ -146,9 +154,13 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private boolean isPasswordValid(String password) {
-        String confirmPassword = mConfirmPasswordView.getText().toString();
         //Only return true if its the same as first entry and length is over or equal to 8 characters
-        return confirmPassword.equals(password) && password.length()>=8;
+        return password.length()>=8;
+    }
+
+    private boolean isPasswordNotMatch(String password) {
+        String confirmPassword = mConfirmPasswordView.getText().toString();
+        return confirmPassword.equals(password);
     }
 
     //Create firebase user
