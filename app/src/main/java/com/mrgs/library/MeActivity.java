@@ -18,6 +18,13 @@ public class MeActivity extends AppCompatActivity {
             setContentView(R.layout.activity_me);
         }
 
+    // Executed when Home button pressed
+    public void openHomeActivity(View v) {
+        Intent home = new Intent(MeActivity.this, com.mrgs.library.MainChatActivity.class);
+        finish();
+        startActivity(home);
+    }
+
     // Executed when logout button pressed
     public void attemptLogout(View v) {
         FirebaseAuth.getInstance().signOut();
