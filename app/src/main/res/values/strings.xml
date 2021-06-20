@@ -52,4 +52,9 @@
     <string name="sort_label">Sort</string>
     <string name="mybook_label">My Book</string>
     <string name="me_label">Me</string>
+
+    <!-- input type -->
+    <string name="input_type_username">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_</string>
+    <string name="input_type_email">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@.</string>
+    <string name="input_type_password">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890</string>
 </resources>
