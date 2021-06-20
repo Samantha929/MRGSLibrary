@@ -31,9 +31,99 @@
         android:background="@color/white"
         android:onClick="attemptLogout"
         android:text="@string/logout_button"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/me_email" />
+
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/home_button"
+        android:onClick="openHomeActivity"
+        app:layout_constraintBottom_toTopOf="@+id/home_label"
+        app:layout_constraintEnd_toStartOf="@+id/sort_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/sort_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/sort_button"
+        app:layout_constraintBottom_toTopOf="@+id/sort_label"
+        app:layout_constraintEnd_toStartOf="@+id/mybook_button"
+        app:layout_constraintStart_toEndOf="@+id/home_button"
+        app:srcCompat="@drawable/widget" />
+
+    <ImageButton
+        android:id="@+id/mybook_button"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:contentDescription="@string/mybook_button"
+        app:layout_constraintBottom_toTopOf="@+id/mybook_label"
+        app:layout_constraintEnd_toStartOf="@+id/me_button"
+        app:layout_constraintStart_toEndOf="@+id/sort_button"
+        app:srcCompat="@drawable/books" />
+
+    <ImageButton
+        android:id="@+id/me_button"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:contentDescription="@string/me_button"
+        app:layout_constraintBottom_toTopOf="@+id/me_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mybook_button"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/home_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/home_label"
+        android:textColor="@color/black"
+        android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sort_label"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sort_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/sort_label"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mybook_label"
+        app:layout_constraintStart_toEndOf="@+id/home_label" />
+
+    <TextView
+        android:id="@+id/mybook_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/mybook_label"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/me_label"
+        app:layout_constraintStart_toEndOf="@+id/sort_label" />
+
+    <TextView
+        android:id="@+id/me_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/me_label"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mybook_label" />
 </androidx.constraintlayout.widget.ConstraintLayout>
