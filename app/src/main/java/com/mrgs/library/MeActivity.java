@@ -19,7 +19,7 @@ public class MeActivity extends AppCompatActivity {
         }
 
     // Executed when Home button pressed
-    public void openHomeActivity(View v) {
+    public void openHomefromMe(View v) {
         Intent home = new Intent(MeActivity.this, com.mrgs.library.MainChatActivity.class);
         finish();
         startActivity(home);

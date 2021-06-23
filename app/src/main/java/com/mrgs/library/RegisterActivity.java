@@ -71,9 +71,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     // Executed when Sign in button pressed
     public void backLoginActivity(View v) {
-        Intent intent = new Intent(this, com.mrgs.library.LoginActivity.class);
+        Intent loginPage = new Intent(this, com.mrgs.library.LoginActivity.class);
         finish();
-        startActivity(intent);
+        startActivity(loginPage);
     }
 
     // Executed when Sign Up button is pressed.
@@ -179,9 +179,9 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d("firebase", "createUser onComplete;" + task.isSuccessful());
                             Toast.makeText(getApplicationContext(), "Registered Success", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegisterActivity.this, com.mrgs.library.MainChatActivity.class);
+                            Intent homePage = new Intent(RegisterActivity.this, com.mrgs.library.MainChatActivity.class);
                             finish();
-                            startActivity(intent);
+                            startActivity(homePage);
                         } else {
                             Log.d("firebase", "user create failed");
                         Toast.makeText(getApplicationContext(), "Registered Failed", Toast.LENGTH_SHORT).show();

@@ -68,9 +68,9 @@ public class LoginActivity extends AppCompatActivity {
 
     // Executed when Register button pressed
     public void registerNewUser(View v) {
-        Intent intent = new Intent(this, com.mrgs.library.RegisterActivity.class);
+        Intent registerPage = new Intent(this, com.mrgs.library.RegisterActivity.class);
         finish();
-        startActivity(intent);
+        startActivity(registerPage);
     }
 
     //Attempt login function
@@ -146,9 +146,9 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(getApplicationContext(), "Sign in Success", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, com.mrgs.library.MainChatActivity.class);
+                                Intent homePage = new Intent(LoginActivity.this, com.mrgs.library.MainChatActivity.class);
                                 finish();
-                                startActivity(intent);
+                                startActivity(homePage);
                             } else {
                                 Toast.makeText(getApplicationContext(), "Sign in Failed", Toast.LENGTH_SHORT).show();
                                 login_progressBar.setVisibility(View.GONE);
