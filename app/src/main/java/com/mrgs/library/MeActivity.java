@@ -25,6 +25,13 @@ public class MeActivity extends AppCompatActivity {
         startActivity(home);
     }
 
+    // Executed when Me button pressed
+    public void openSortfromMe(View v) {
+        Intent sort = new Intent(MeActivity.this, com.mrgs.library.SortActivity.class);
+        finish();
+        startActivity(sort);
+    }
+
     // Executed when logout button pressed
     public void attemptLogout(View v) {
         FirebaseAuth.getInstance().signOut();
