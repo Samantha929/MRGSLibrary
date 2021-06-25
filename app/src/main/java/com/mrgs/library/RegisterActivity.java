@@ -151,6 +151,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private boolean isUsernameValid(String username) {
         username = mUsernameView.getText().toString();
+        //Cannot have name longer than 20
         return username.length()<=20;
     }
 
