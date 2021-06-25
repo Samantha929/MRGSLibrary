@@ -8,6 +8,7 @@
     <string name="mrgs_heading">MRGS Library</string>
     <string name="register_heading">Register</string>
     <string name="login_heading">Login</string>
+    <string name="sort_heading">Sort</string>
     <string name="me_heading">Me</string>
 
     <!-- label for enter box -->
@@ -52,6 +53,11 @@
     <string name="sort_label">Sort</string>
     <string name="mybook_label">My Book</string>
     <string name="me_label">Me</string>
+    <string name="book_name_label">Name</string>
+    <string name="book_author_label">Author</string>
+    <string name="book_year_label">Year</string>
+    <string name="book_type_label">Type</string>
+    <string name="book_theme_label">Theme</string>
 
     <!-- input type -->
     <string name="input_type_username">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_</string>

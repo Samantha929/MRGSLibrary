@@ -36,6 +36,11 @@
         </activity>
 
         <activity
+            android:name="com.mrgs.library.SortActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
             android:name="com.mrgs.library.MeActivity"
             android:screenOrientation="portrait">
         </activity>
