@@ -1,6 +1,7 @@
 package com.mrgs.library;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
 import androidx.annotation.NonNull;
@@ -26,7 +27,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     // Constants
     public static final String ME_PREFS = "MePrefs";
-    public static final String DISPLAY_NAME_KEY = "username and email";
+    public static final String DISPLAY_NAME_KEY = "username";
+    public static final String DISPLAY_EMAIL_KEY = "email";
+
+    public static final String Email = "";
 
     // UI references variables
     private AutoCompleteTextView mEmailView;
@@ -38,7 +42,8 @@ public class RegisterActivity extends AppCompatActivity {
     //Firebase authentication (auth)
     private FirebaseAuth mAuth;
 
-
+    //Shared preferences
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +71,8 @@ public class RegisterActivity extends AppCompatActivity {
         //Instance firebase auth
         mAuth = FirebaseAuth.getInstance();
 
-
+        //Using key to get Shared Preferences
+        sharedPref = getSharedPreferences(ME_PREFS, MODE_PRIVATE);
     }
 
     // Executed when Sign in button pressed
@@ -165,6 +171,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     //Create firebase user
     private void createFirebaseUser() {
+        String username = mUsernameView.getText().toString();
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
 
@@ -177,6 +184,11 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            //Get the information that user input, then use Shared preferences to display in other activity
+                           sharedPref.edit().putString(DISPLAY_NAME_KEY, username).apply();
+                           sharedPref.edit().putString(DISPLAY_EMAIL_KEY, email).apply();
+
                             Log.d("firebase", "createUser onComplete;" + task.isSuccessful());
                             Toast.makeText(getApplicationContext(), "Registered Success", Toast.LENGTH_SHORT).show();
                             Intent homePage = new Intent(RegisterActivity.this, com.mrgs.library.MainChatActivity.class);

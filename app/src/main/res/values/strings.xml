@@ -53,6 +53,8 @@
     <string name="sort_label">Sort</string>
     <string name="mybook_label">My Book</string>
     <string name="me_label">Me</string>
+    <string name="username_label">Username</string>
+    <string name="email_label">Email</string>
     <string name="book_name_label">Name</string>
     <string name="book_author_label">Author</string>
     <string name="book_year_label">Year</string>
