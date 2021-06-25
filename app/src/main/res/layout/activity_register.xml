@@ -63,6 +63,7 @@
             android:digits="@string/input_type_email"
             android:inputType="textEmailAddress"
             android:maxLines="1"
+            android:text="@string/mrgs_email"
             android:textIsSelectable="false"/>
 
     </com.google.android.material.textfield.TextInputLayout>
