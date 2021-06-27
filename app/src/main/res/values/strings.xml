@@ -9,6 +9,7 @@
     <string name="register_heading">Register</string>
     <string name="login_heading">Login</string>
     <string name="sort_heading">Sort</string>
+    <string name="mybook_heading">My Book</string>
     <string name="me_heading">Me</string>
 
     <!-- label for enter box -->
