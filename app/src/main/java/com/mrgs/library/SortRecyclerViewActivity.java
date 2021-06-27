@@ -68,6 +68,7 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
 
     }
 
+    //Store each book's data using ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         //Constant
