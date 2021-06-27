@@ -93,6 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="53dp"
         android:contentDescription="@string/mybook_button"
+        android:onClick="openMyBookfromMe"
         app:layout_constraintBottom_toTopOf="@+id/mybook_label"
         app:layout_constraintEnd_toStartOf="@+id/me_button"
         app:layout_constraintStart_toEndOf="@+id/sort_button"

@@ -39,6 +39,13 @@ public class SortActivity extends AppCompatActivity {
         startActivity(home);
     }
 
+    // Executed when My Book button pressed
+    public void openMyBookfromSort(View v) {
+        Intent mybook = new Intent(SortActivity.this, com.mrgs.library.MyBookActivity.class);
+        finish();
+        startActivity(mybook);
+    }
+
     // Executed when Me button pressed
     public void openMefromSort(View v) {
         Intent me = new Intent(SortActivity.this, com.mrgs.library.MeActivity.class);

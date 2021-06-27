@@ -25,11 +25,18 @@ public class MainChatActivity extends AppCompatActivity {
 
     }
 
-    // Executed when Me button pressed
+    // Executed when Sort button pressed
     public void openSortfromHome(View v) {
         Intent sort = new Intent(MainChatActivity.this, com.mrgs.library.SortActivity.class);
         finish();
         startActivity(sort);
+    }
+
+    // Executed when My Book button pressed
+    public void openMyBookfromHome(View v) {
+        Intent mybook = new Intent(MainChatActivity.this, com.mrgs.library.MyBookActivity.class);
+        finish();
+        startActivity(mybook);
     }
 
     // Executed when Me button pressed

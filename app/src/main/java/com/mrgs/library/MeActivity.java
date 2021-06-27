@@ -49,11 +49,18 @@ public class MeActivity extends AppCompatActivity {
         startActivity(home);
     }
 
-    // Executed when Me button pressed
+    // Executed when Sort button pressed
     public void openSortfromMe(View v) {
         Intent sort = new Intent(MeActivity.this, com.mrgs.library.SortActivity.class);
         finish();
         startActivity(sort);
+    }
+
+    // Executed when My Book button pressed
+    public void openMyBookfromMe(View v) {
+        Intent mybook = new Intent(MeActivity.this, com.mrgs.library.MyBookActivity.class);
+        finish();
+        startActivity(mybook);
     }
 
     // Executed when logout button pressed
