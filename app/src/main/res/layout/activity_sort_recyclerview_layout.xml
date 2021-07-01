@@ -17,70 +17,71 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/book_cover"
+                android:id="@+id/sort_book_cover"
                 android:layout_width="100dp"
-                android:layout_height="130dp"
+                android:layout_height="170dp"
                 android:layout_marginRight="5dp"
                 android:src="@drawable/book_cover"
                 android:layout_centerHorizontal="false">
             </ImageView>
 
             <TextView
-                android:id="@+id/book_name"
+                android:id="@+id/sort_book_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:layout_toRightOf="@id/book_cover"
+                android:layout_toRightOf="@id/sort_book_cover"
                 android:text="@string/book_name_label"
                 android:textColor="@color/black"
                 android:textSize="12sp">
             </TextView>
 
             <TextView
-                android:id="@+id/book_author"
+                android:id="@+id/sort_book_author"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="@string/book_author_label"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                android:layout_toRightOf="@id/book_cover"
-                android:layout_below="@id/book_name">
+                android:layout_toRightOf="@id/sort_book_cover"
+                android:layout_below="@id/sort_book_name">
             </TextView>
 
             <TextView
-                android:id="@+id/book_year"
+                android:id="@+id/sort_book_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="@string/book_year_label"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                android:layout_toRightOf="@id/book_cover"
-                android:layout_below="@id/book_author">
+                android:layout_toRightOf="@id/sort_book_cover"
+                android:layout_below="@id/sort_book_author">
             </TextView>
 
             <TextView
-                android:id="@+id/book_type"
+                android:id="@+id/sort_book_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:text="@string/book_type_label"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                android:layout_toRightOf="@id/book_cover"
-                android:layout_below="@id/book_year">
+                android:layout_toRightOf="@id/sort_book_cover"
+                android:layout_below="@id/sort_book_year">
             </TextView>
 
             <TextView
-                android:id="@+id/book_theme"
+                android:id="@+id/sort_book_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:text="@string/book_theme_label"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                android:layout_toRightOf="@id/book_cover"
-                android:layout_below="@id/book_type">
+                android:layout_toRightOf="@id/sort_book_cover"
+                android:layout_below="@id/sort_book_type">
             </TextView>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

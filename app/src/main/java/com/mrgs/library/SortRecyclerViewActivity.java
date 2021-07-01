@@ -84,12 +84,12 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
         //Item view
         public ViewHolder (View itemView) {
             super(itemView);
-            nBookCover = itemView.findViewById(R.id.book_cover);
-            nBookName = itemView.findViewById(R.id.book_name);
-            nBookAuthor = itemView.findViewById(R.id.book_author);
-            nBookYear = itemView.findViewById(R.id.book_year);
-            nBookType = itemView.findViewById(R.id.book_type);
-            nBookTheme = itemView.findViewById(R.id.book_theme);
+            nBookCover = itemView.findViewById(R.id.sort_book_cover);
+            nBookName = itemView.findViewById(R.id.sort_book_name);
+            nBookAuthor = itemView.findViewById(R.id.sort_book_author);
+            nBookYear = itemView.findViewById(R.id.sort_book_year);
+            nBookType = itemView.findViewById(R.id.sort_book_type);
+            nBookTheme = itemView.findViewById(R.id.sort_book_theme);
             nSortRecyclerViewLayout = itemView.findViewById(R.id.sort_recyclerview_layout);
 
         }
