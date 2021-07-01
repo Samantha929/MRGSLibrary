@@ -56,7 +56,7 @@ public class SortActivity extends AppCompatActivity {
     //Data for the book
     @SuppressLint("LongLogTag")
     private void dataBook() {
-        Log.d("Data", "Loading......");
+        Log.d("Data", "Loading for data......");
 
         mBookCover.add(R.drawable.harrypotter_bookcover);
         mBookName.add("Harry Potter and the Philosopher's Stone");
@@ -112,7 +112,7 @@ public class SortActivity extends AppCompatActivity {
 
     //Set the book to display in the recycler view
     private void recyclerview() {
-        Log.d("recycler view", "Recycler view");
+        Log.d("recycler view", "Connecting to recycler view");
         RecyclerView recyclerView = findViewById(R.id.sort_recyclerview);
         SortRecyclerViewActivity adapter = new SortRecyclerViewActivity(this,
                 mBookCover, mBookName, mBookAuthor, mBookYear, mBookType, mBookTheme);
