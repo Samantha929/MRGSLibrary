@@ -41,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //Find the variables from the id in xml
         mEmailView = findViewById(R.id.login_email);
         mPasswordView = findViewById(R.id.login_password);
         mLogin = findViewById(R.id.login_button);
@@ -119,11 +120,13 @@ public class LoginActivity extends AppCompatActivity {
             login();
         }
     }
+    //Check if the email is valid
     private boolean isEmailValid(String email) {
         //Checking logic here.
         return email.contains("@students.mrgs.school.nz");
     }
 
+    //Check if the password is longer than 8 characters
     private boolean isPasswordValid(String password) {
         password = mPasswordView.getText().toString();
         //Only return true if its the same as first entry and length is over or equal to 8 characters
@@ -145,12 +148,17 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(getApplicationContext(), "Sign in Success", Toast.LENGTH_SHORT).show();
+                                //Message to tell the end-user that they login success
+                                Toast.makeText(getApplicationContext(), "Login Success", Toast.LENGTH_SHORT).show();
+
+                                //Go to MainChatActivity page
                                 Intent homePage = new Intent(LoginActivity.this, com.mrgs.library.MainChatActivity.class);
                                 finish();
                                 startActivity(homePage);
                             } else {
-                                Toast.makeText(getApplicationContext(), "Sign in Failed", Toast.LENGTH_SHORT).show();
+                                //Message to tell the end-user that they login fail
+                                Toast.makeText(getApplicationContext(), "Login Failed", Toast.LENGTH_SHORT).show();
+                                //Make the progress bar gone after shower the toast message
                                 login_progressBar.setVisibility(View.GONE);
                             }
                         }

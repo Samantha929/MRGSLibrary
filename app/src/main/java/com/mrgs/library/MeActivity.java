@@ -30,6 +30,7 @@ public class MeActivity extends AppCompatActivity {
             setContentView(R.layout.activity_me);
             Intent intent = getIntent();
 
+            //Find the variables from the id in xml
             mMe_username = findViewById(R.id.me_username);
             mMe_email = findViewById(R.id.me_email);
 

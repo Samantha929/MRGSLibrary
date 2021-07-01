@@ -6,10 +6,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +28,7 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
     private ArrayList<String> mBookTheme = new ArrayList<>();
     private final Context mContext;
 
+    //Constructor
     public SortRecyclerViewActivity(Context context, ArrayList<Integer> bookCover, ArrayList<String> bookName,
                                     ArrayList<String> bookAuthor, ArrayList<String> bookYear,
                                     ArrayList<String> bookType, ArrayList<String> bookTheme) {
@@ -46,6 +45,7 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        //Recycling the view holder to put in the position where I want to place in
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_sort_recyclerview_layout, parent, false);
         return new ViewHolder(view);
     }
@@ -55,6 +55,7 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
         Log.d("view holder", "View holder called");
         Glide.with(mContext).asBitmap().load(mBookCover.get(position)).into(holder.nBookCover);
 
+        //Hold to the book data in the position I want to placed
         holder.nBookName.setText(mBookName.get(position));
         holder.nBookAuthor.setText(mBookAuthor.get(position));
         holder.nBookYear.setText(mBookYear.get(position));
@@ -64,6 +65,7 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
 
     @Override
     public int getItemCount() {
+        //To tell how item in the list need to be display in the app
         return mBookName.size();
 
     }
@@ -84,6 +86,7 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
         //Item view
         public ViewHolder (View itemView) {
             super(itemView);
+            //Find the variables from the id in xml and make it into item view
             nBookCover = itemView.findViewById(R.id.sort_book_cover);
             nBookName = itemView.findViewById(R.id.sort_book_name);
             nBookAuthor = itemView.findViewById(R.id.sort_book_author);
@@ -91,7 +94,6 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
             nBookType = itemView.findViewById(R.id.sort_book_type);
             nBookTheme = itemView.findViewById(R.id.sort_book_theme);
             nSortRecyclerViewLayout = itemView.findViewById(R.id.sort_recyclerview_layout);
-
         }
     }
 }

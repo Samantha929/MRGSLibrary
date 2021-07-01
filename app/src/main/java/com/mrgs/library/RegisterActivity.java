@@ -50,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        //Find the variables from the id in xml
         mEmailView = findViewById(R.id.register_email);
         mPasswordView = findViewById(R.id.register_password);
         mConfirmPasswordView = findViewById(R.id.register_confirm_password);
@@ -102,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
         boolean cancel = false;
         View focusView = null;
 
-        //Check if the username are empty
+        //Check if the username are empty or too long
         if (TextUtils.isEmpty(username)) {
             mUsernameView.setError(getString(R.string.error_field_required));
             focusView = mUsernameView;
@@ -149,22 +150,26 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
+    //Check if username is longer than 20 characters
     private boolean isUsernameValid(String username) {
         username = mUsernameView.getText().toString();
         //Cannot have name longer than 20
         return username.length()<=20;
     }
 
+    //Check if the email is valid
     private boolean isEmailValid(String email) {
         //Checking logic here
         return email.contains("@students.mrgs.school.nz");
     }
 
+    //Check if the password is valid
     private boolean isPasswordValid(String password) {
         //Only return true if its the same as first entry and length is over or equal to 8 characters
         return password.length()>=8;
     }
 
+    //Check if the password matches with the confirm password
     private boolean isPasswordNotMatch(String password) {
         String confirmPassword = mConfirmPasswordView.getText().toString();
         return confirmPassword.equals(password);
@@ -191,13 +196,18 @@ public class RegisterActivity extends AppCompatActivity {
                            sharedPref.edit().putString(DISPLAY_EMAIL_KEY, email).apply();
 
                             Log.d("firebase", "createUser onComplete;" + task.isSuccessful());
+
+                            //Message to tell end-users that they register success
                             Toast.makeText(getApplicationContext(), "Registered Success", Toast.LENGTH_SHORT).show();
+                            //Go to MainChatActivity page
                             Intent homePage = new Intent(RegisterActivity.this, com.mrgs.library.MainChatActivity.class);
                             finish();
                             startActivity(homePage);
                         } else {
                             Log.d("firebase", "user create failed");
+                            //Message to tell end-users that they register fail
                         Toast.makeText(getApplicationContext(), "Registered Failed", Toast.LENGTH_SHORT).show();
+                        //Make the progress bar gone after showing the toast message
                         register_progressBar.setVisibility(View.GONE);
                         }
                     }
