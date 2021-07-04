@@ -1,6 +1,7 @@
 package com.mrgs.library;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -12,8 +13,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -53,9 +52,13 @@ public class SortRecyclerViewActivity extends RecyclerView.Adapter<SortRecyclerV
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         Log.d("view holder", "View holder called");
-        Glide.with(mContext).asBitmap().load(mBookCover.get(position)).into(holder.nBookCover);
+
+        //Hold book cover in the position I want to placed
+        Integer nBookCover = mBookCover.get(position);
+        Drawable drawable = mContext.getResources().getDrawable(nBookCover);
 
         //Hold to the book data in the position I want to placed
+        holder.nBookCover.setImageDrawable(drawable);
         holder.nBookName.setText(mBookName.get(position));
         holder.nBookAuthor.setText(mBookAuthor.get(position));
         holder.nBookYear.setText(mBookYear.get(position));
