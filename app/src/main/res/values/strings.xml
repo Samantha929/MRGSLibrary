@@ -49,6 +49,9 @@
     <string name="mybook_button">My Book</string>
     <string name="me_button">Me</string>
     <string name="logout_button">Logout</string>
+    <string name="issued_button">Issued</string>
+    <string name="overdue_button">Overdue</string>
+    <string name="renew_button">Renew</string>
 
     <!-- Label -->
     <string name="home_label">Home</string>
@@ -62,6 +65,8 @@
     <string name="book_year_label">Year</string>
     <string name="book_type_label">Type</string>
     <string name="book_theme_label">Theme</string>
+    <string name="issue_label">Issue</string>
+    <string name="duedate_label">Due Date</string>
 
     <!-- input type -->
     <string name="input_type_username">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_</string>
