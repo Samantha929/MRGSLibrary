@@ -83,6 +83,21 @@
                 android:layout_toRightOf="@id/sort_book_cover"
                 android:layout_below="@id/sort_book_type">
             </TextView>
+
+            <TextView
+                android:id="@+id/issue"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/sort_book_cover"
+                android:layout_below="@id/sort_book_theme"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="@string/issue_label"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold">
+
+            </TextView>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
