@@ -34,9 +34,11 @@
     <string name="error_invalid_username">This username is too long</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">Password does not match with the confirm password</string>
-    <string name="error_invalid_password_too_short">Password is too short</string>
+    <string name="error_invalid_password_too_short">Password is too short It need to be at least 8 characters</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="email_short">This email is too short</string>
+    <string name="email_long">This email is too long</string>
 
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
