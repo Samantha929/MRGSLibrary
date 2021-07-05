@@ -28,7 +28,7 @@
     <WebView
         android:id="@+id/mrgs_library_web"
         android:layout_width="match_parent"
-        android:layout_height="650dp"
+        android:layout_height="470dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="25dp"
