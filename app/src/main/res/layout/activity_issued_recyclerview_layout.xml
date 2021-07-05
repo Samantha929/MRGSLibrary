@@ -19,7 +19,7 @@
             <ImageView
                 android:id="@+id/issued_book_cover"
                 android:layout_width="100dp"
-                android:layout_height="170dp"
+                android:layout_height="130dp"
                 android:layout_marginRight="5dp"
                 android:src="@drawable/book_cover"
                 android:layout_centerHorizontal="false">
@@ -85,15 +85,14 @@
             </TextView>
 
             <TextView
-                android:id="@+id/issue"
-                android:layout_width="150dp"
+                android:id="@+id/duedate"
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_below="@id/issued_book_theme"
                 android:layout_toRightOf="@id/issued_book_cover"
-                android:background="@color/green"
                 android:gravity="center"
                 android:text="@string/duedate_label"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold">
             </TextView>
