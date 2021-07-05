@@ -110,6 +110,14 @@ public class LoginActivity extends AppCompatActivity {
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
+        }else if (emailLengthShort(email)) {
+            mEmailView.setError(getString(R.string.email_short));
+            focusView = mEmailView;
+            cancel = true;
+        } else if (emailLengthLong(email)) {
+            mEmailView.setError(getString(R.string.email_long));
+            focusView = mEmailView;
+            cancel = true;
         }
 
         if (cancel) {
@@ -124,6 +132,16 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isEmailValid(String email) {
         //Checking logic here.
         return email.contains("@students.mrgs.school.nz");
+    }
+
+    //Check if the email length are too long
+    private boolean emailLengthLong(String email) {
+        return email.length() > 29;
+    }
+
+    //Check if the email length are too sjort
+    private boolean emailLengthShort(String email) {
+        return email.length() < 29;
     }
 
     //Check if the password is longer than 8 characters
