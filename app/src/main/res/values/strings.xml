@@ -9,7 +9,7 @@
     <string name="register_heading">Register</string>
     <string name="login_heading">Login</string>
     <string name="sort_heading">Sort</string>
-    <string name="mybook_heading">My Book</string>
+    <string name="mybook_heading">My Books</string>
     <string name="me_heading">Me</string>
 
     <!-- label for enter box -->
@@ -58,7 +58,7 @@
     <!-- Label -->
     <string name="home_label">Home</string>
     <string name="sort_label">Sort</string>
-    <string name="mybook_label">My Book</string>
+    <string name="mybook_label">My Books</string>
     <string name="me_label">Me</string>
     <string name="username_label">Username</string>
     <string name="email_label">Email</string>
