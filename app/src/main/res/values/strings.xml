@@ -67,7 +67,7 @@
     <string name="book_year_label">Year</string>
     <string name="book_type_label">Type</string>
     <string name="book_theme_label">Theme</string>
-    <string name="issue_label">Issue</string>
+    <string name="available_label">Available</string>
     <string name="duedate_label">Due Date</string>
 
     <!-- input type -->
