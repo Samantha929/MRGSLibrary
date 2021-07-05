@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class OverdueRecyclerViewActivity extends RecyclerView.Adapter<OverdueRecyclerViewActivity.ViewHolder> {
+public class OverdueRecyclerViewActivity extends RecyclerView.Adapter<OverdueRecyclerViewActivity.myViewHolder> {
 
     //Array list
     private ArrayList<Integer> mBookCover = new ArrayList<>();
@@ -43,14 +43,14 @@ public class OverdueRecyclerViewActivity extends RecyclerView.Adapter<OverdueRec
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Recycling the view holder to put in the position where I want to place in
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_overdue_recyclerview_layout, parent, false);
-        return new ViewHolder(view);
+        return new myViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(myViewHolder holder, int position) {
         Log.d("view holder", "View holder called");
 
         //Hold book cover in the position I want to placed
@@ -74,7 +74,7 @@ public class OverdueRecyclerViewActivity extends RecyclerView.Adapter<OverdueRec
     }
 
     //Store each book's data using ViewHolder
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class myViewHolder extends RecyclerView.ViewHolder {
 
         //Constant
         ImageView nBookCover;
@@ -87,7 +87,7 @@ public class OverdueRecyclerViewActivity extends RecyclerView.Adapter<OverdueRec
 
 
         //Item view
-        public ViewHolder (View itemView) {
+        public myViewHolder (View itemView) {
             super(itemView);
             //Find the variables from the id in xml and make it into item view
             nBookCover = itemView.findViewById(R.id.overdue_book_cover);
