@@ -84,12 +84,27 @@
                 android:layout_below="@id/issued_book_type">
             </TextView>
 
+            <Button
+                android:id="@+id/issued_return"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/issued_book_cover"
+                android:layout_below="@id/issued_book_theme"
+                android:background="@color/orange"
+                android:gravity="center"
+                android:text="@string/return_button"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold">
+            </Button>
+
             <TextView
                 android:id="@+id/duedate"
-                android:layout_width="match_parent"
+                android:layout_width="210dp"
                 android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
                 android:layout_below="@id/issued_book_theme"
-                android:layout_toRightOf="@id/issued_book_cover"
+                android:layout_toRightOf="@id/issued_return"
                 android:gravity="center"
                 android:text="@string/duedate_label"
                 android:textColor="@color/black"

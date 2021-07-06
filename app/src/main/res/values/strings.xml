@@ -54,6 +54,7 @@
     <string name="issued_button">Issued</string>
     <string name="overdue_button">Overdue</string>
     <string name="renew_button">Renew</string>
+    <string name="return_button">Return</string>
 
     <!-- Label -->
     <string name="home_label">Home</string>

@@ -85,12 +85,27 @@
             </TextView>
 
             <Button
-                android:id="@+id/renew"
-                android:layout_width="match_parent"
+                android:id="@+id/overdue_return"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_toRightOf="@id/overdue_book_cover"
                 android:layout_below="@id/overdue_book_theme"
+                android:background="@color/orange"
+                android:gravity="center"
+                android:text="@string/return_button"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold">
+            </Button>
+
+            <Button
+                android:id="@+id/overdue_renew"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/overdue_return"
+                android:layout_below="@id/overdue_book_theme"
                 android:background="@color/red1"
+                android:gravity="center"
                 android:text="@string/renew_button"
                 android:textColor="@color/white"
                 android:textSize="14sp"
