@@ -92,6 +92,7 @@
                 android:layout_below="@id/issued_book_theme"
                 android:background="@color/orange"
                 android:gravity="center"
+                android:onClick="issuedReturn"
                 android:text="@string/return_button"
                 android:textColor="@color/white"
                 android:textSize="14sp"

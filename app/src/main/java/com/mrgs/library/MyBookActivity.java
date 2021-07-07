@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -153,5 +154,20 @@ public class MyBookActivity extends AppCompatActivity {
     public void overdueBook(View v){
         i = 2;
         recyclerview();
+    }
+
+    // Executed when Return button in Issued recyclerview is pressed
+    public void issuedReturn(View v) {
+        Toast.makeText(MyBookActivity.this, "Return the book", Toast.LENGTH_SHORT).show();
+    }
+
+    // Executed when Return button in Overdue recyclerview is pressed
+    public void overdueReturn(View v) {
+        Toast.makeText(MyBookActivity.this, "Return the book", Toast.LENGTH_SHORT).show();
+    }
+
+    // Executed when Renew button in Overdue recyclerview is pressed
+    public void overdueRenew(View v) {
+        Toast.makeText(MyBookActivity.this, "Renew the book", Toast.LENGTH_SHORT).show();
     }
 }
