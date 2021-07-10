@@ -19,16 +19,11 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
 
-    <string name="message">Type a message</string>
-
     <!-- button label -->
     <string name="register_button">Register an account</string>
     <string name="login_button">Login</string>
     <string name="signup_button">Sign up</string>
     <string name="back_login_button">Back to login</string>
-
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_send">Send</string>
 
     <!-- error -->
     <string name="error_invalid_username">This username is too long</string>
@@ -39,11 +34,6 @@
     <string name="error_field_required">This field is required</string>
     <string name="email_short">This email is too short</string>
     <string name="email_long">This email is too long</string>
-
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
-    <string name="sample_message">Hello!</string>
 
     <!-- Button -->
     <string name="home_button">Home</string>
