@@ -176,7 +176,7 @@ public class RegisterActivity extends AppCompatActivity {
         return email.length() > 29;
     }
 
-    //Check if the email length are too sjort
+    //Check if the email length are too short
     private boolean emailLengthShort(String email) {
         return email.length() < 29;
     }
